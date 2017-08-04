@@ -25,10 +25,6 @@ require CORE_PATH.DS.'App.php';
 require LITE_PATH.DS.'Helper.php';
 
 //设置include path
-/*if(function_exists('ini_set')){
-    ini_set('include_path',LITE_PATH.PATH_SEPARATOR.ini_get('include_path'));
-}*/
-
 set_include_path(LITE_PATH.PATH_SEPARATOR.
   //  CORE_CONFIG_PATH.PATH_SEPARATOR.
     APP_CONFIG_PATH.PATH_SEPARATOR.
@@ -37,8 +33,4 @@ set_include_path(LITE_PATH.PATH_SEPARATOR.
 
 \Lite\Core\App::run();
 
-//spl_autoload_register('\Lite\Core\App::load');
-\Lite\Configure\Configure::load('core');
-\Lite\Configure\Configure::set('core.hello',5);
-var_dump(\Lite\Configure\Configure::get('core.hello'));
 
